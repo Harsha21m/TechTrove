@@ -1,0 +1,26 @@
+<%- include("static_files/header") %>
+
+<div class="login-wrapper">
+  <div class="login-card">
+    <h2>Welcome Back 🫣</h2>
+    <% if (typeof error !== 'undefined') { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <form action="/login" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" required placeholder="Enter your username (admin)">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" required placeholder="Enter your password (1234)">
+      </div>
+
+      <button type="submit" class="btn-submit">Login</button>
+    </form>
+  </div>
+</div>
+
+<%- include("static_files/footer.ejs") %>

@@ -1,0 +1,33 @@
+<%- include("static_files/header") %>
+
+<div class="posts-container">
+  <h1>All Your Blog Posts</h1>
+
+  <div class="postlink">
+    <% if (posts.length === 0) { %>
+      <div class="cont">
+        <p class="txt">Hey..! You haven't created any posts yet. 😏</p>
+        <a href="/posts" class="btn create">Create one</a>
+      </div>
+    <% } else { %>
+    <% posts.forEach(post => { %>
+  <div class="post-card">
+    <% if (post.imageUrl) { %>
+      <img src="<%= post.imageUrl %>" alt="Post Image" class="post-image">
+    <% } %>
+    <h2><%= post.title %></h2>
+    <p><%= post.content %></p>
+    <div class="post-actions">
+      <a href="/posts/<%= post.id %>/edit" class="btn edit">Edit</a>
+      <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+        <button type="submit" class="btn delete">Delete</button>
+      </form>
+    </div>
+  </div>
+<% }) %>
+
+    <% } %>
+  </div>
+</div>
+
+<%- include("static_files/footer") %>
