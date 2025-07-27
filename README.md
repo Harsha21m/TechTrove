@@ -22,6 +22,7 @@
 ---
 
 ## 📂 Project Structure
+```bash
 TechTrove/
 ├── public/
 │ ├── uploads/
@@ -34,3 +35,33 @@ TechTrove/
 ├── routes/
 ├── app.js
 └── README.md
+```
+
+---
+
+
+## 🖥️ Setup Instructions
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/yourusername/techtrove.git
+cd techtrove
+```
+2.**Install dependencies:**
+```bash
+npm install
+```
+3.**Start the server:**
+```bash
+node Server.js
+```
+4.**Visit in browser:**
+```bash
+http://localhost:3000
+```
+---
+
+## 📬 Feedback
+Have suggestions or found a bug?  <br>
+Feel free to open an issue or drop a message!
